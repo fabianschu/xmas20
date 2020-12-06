@@ -6,12 +6,12 @@ const StyledFooter = styled.div`
   max-width: 375px;
   background-color: black;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-family: "Century Gothic";
-  font-weight: bold;
-  font-size: 25px;
-  color: white;
+  font-size: 20px;
+  color: #f8768b;
 `;
 
 export default StyledFooter;

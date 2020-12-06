@@ -10,6 +10,7 @@ import Welcome from "./pages/Welcome";
 import Search from "./pages/Search";
 import centuryGothic from "./assets/century_gothic_regular.ttf";
 import centuryGothicBold from "./assets/century_gothic_bold.ttf";
+import ridingRainbow from "./assets/riding-rainbow.gif";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -87,11 +88,10 @@ function App() {
               <Redirect to="/welcome" />
             </Route>
             <Route exact path="/welcome">
-              <h1></h1>
               <Welcome />
             </Route>
             <Route exact path="/1">
-              <Search />
+              <Search image={ridingRainbow} targets={[15, 16]} linkTarget={2} />
             </Route>
           </Switch>
         </Router>

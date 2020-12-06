@@ -3,10 +3,9 @@ import styled from "styled-components";
 import TapGrid from "../components/TapGrid";
 import StyledContentContainer from "../styled/ContentContainer";
 import StyledFooter from "../styled/Footer";
-import ridingRainbow from "../assets/riding-rainbow.gif";
 
 const StyledSearchContainer = styled.div`
-  background-image: url(${ridingRainbow});
+  background-image: url(${({ image }) => image});
   background-attachment: fixed;
   background-position-x: center;
   background-repeat: no-repeat;
@@ -19,13 +18,15 @@ const StyledSearchContainer = styled.div`
 `;
 
 const Search = (props) => {
+  const { image, targets, linkTarget } = props;
+
   return (
     <>
       <StyledContentContainer>
-        <StyledSearchContainer>
-          <TapGrid targets={[15, 16]} />
+        <StyledSearchContainer image={image}>
+          <TapGrid targets={targets} linkTarget={linkTarget} />
         </StyledSearchContainer>
-        <StyledFooter>lol</StyledFooter>
+        <StyledFooter>Wo ist Sally?</StyledFooter>
       </StyledContentContainer>
     </>
   );

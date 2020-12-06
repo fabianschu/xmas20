@@ -21,6 +21,7 @@ const Welcome = () => {
     <StyledContentContainer>
       <StyledWelcomeTextContainer />
       <StyledFooter>
+        <p>Bereit für Weihnachstfun?</p>
         <Button linkTarget={1} buttonText={"LOS GEHT'S"} />
       </StyledFooter>
     </StyledContentContainer>

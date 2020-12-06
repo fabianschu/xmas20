@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const StyledClickArea = styled.div`
   flex: 1;
@@ -13,11 +14,13 @@ const StyledClickRow = styled.div`
 `;
 
 const TapGrid = (props) => {
-  const { targets } = props;
+  const history = useHistory();
+
+  const { targets, linkTarget } = props;
 
   const handleClick = (e) => {
     if (targets.includes(parseInt(e.target.id))) {
-      console.log("you clicked the right area");
+      history.push(linkTarget.toString());
     } else {
       console.log("nope");
     }
