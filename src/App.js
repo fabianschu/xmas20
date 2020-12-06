@@ -8,6 +8,7 @@ import {
 import { createGlobalStyle } from "styled-components";
 import Welcome from "./pages/Welcome";
 import Search from "./pages/Search";
+import Question from "./pages/Question";
 import centuryGothic from "./assets/century_gothic_regular.ttf";
 import centuryGothicBold from "./assets/century_gothic_bold.ttf";
 import ridingRainbow from "./assets/riding-rainbow.gif";
@@ -92,6 +93,9 @@ function App() {
             </Route>
             <Route exact path="/1">
               <Search image={ridingRainbow} targets={[15, 16]} linkTarget={2} />
+            </Route>
+            <Route exact path="/2">
+              <Question correctAnswer={"42"} linkTarget={3} />
             </Route>
           </Switch>
         </Router>

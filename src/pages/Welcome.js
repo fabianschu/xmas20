@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import Button from "../components/Button";
+import LinkButton from "../components/LinkButton";
 import StyledFooter from "../styled/Footer";
 import StyledContentContainer from "../styled/ContentContainer";
 import ridingRainbow from "../assets/riding-rainbow.gif";
@@ -22,7 +22,7 @@ const Welcome = () => {
       <StyledWelcomeTextContainer />
       <StyledFooter>
         <p>Bereit für Weihnachstfun?</p>
-        <Button linkTarget={1} buttonText={"LOS GEHT'S"} />
+        <LinkButton linkTarget={1} buttonText={"LOS GEHT'S"} />
       </StyledFooter>
     </StyledContentContainer>
   );
