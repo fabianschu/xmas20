@@ -10,6 +10,7 @@ const StyledInput = styled.input`
   font-weight: bold;
   font-size: 25px;
   text-align: center;
+  padding: 0;
 `;
 
 export default StyledInput;
