@@ -14,6 +14,7 @@ const StyledWelcomeTextContainer = styled.div`
   background-attachment: fixed;
   background-position-x: center;
   background-repeat: no-repeat;
+  border-color: red;
 `;
 
 const Welcome = () => {

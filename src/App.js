@@ -12,6 +12,8 @@ import Question from "./pages/Question";
 import centuryGothic from "./assets/century_gothic_regular.ttf";
 import centuryGothicBold from "./assets/century_gothic_bold.ttf";
 import ridingRainbow from "./assets/riding-rainbow.gif";
+import sallyInTheBoxGif from "./assets/sally-in-the-box.gif";
+import sallyInTheBoxJpg from "./assets/sally-in-the-box.jpg";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -79,6 +81,7 @@ const Layout = styled.div`
 `;
 
 function App() {
+  console.log(sallyInTheBoxJpg);
   return (
     <>
       <GlobalStyle />
@@ -96,6 +99,14 @@ function App() {
             </Route>
             <Route exact path="/2">
               <Question correctAnswer={"42"} linkTarget={3} />
+            </Route>
+            <Route exact path="/3">
+              <Search
+                image={sallyInTheBoxJpg}
+                animation={sallyInTheBoxGif}
+                targets={[32, 31, 30, 28, 27, 26, 24, 23]}
+                linkTarget={4}
+              />
             </Route>
           </Switch>
         </Router>

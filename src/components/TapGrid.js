@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 const StyledClickArea = styled.div`
   flex: 1;
   height: 100%;
+  border: 1px solid red;
 `;
 
 const StyledClickRow = styled.div`
@@ -16,15 +17,7 @@ const StyledClickRow = styled.div`
 const TapGrid = (props) => {
   const history = useHistory();
 
-  const { targets, linkTarget } = props;
-
-  const handleClick = (e) => {
-    if (targets.includes(parseInt(e.target.id))) {
-      history.push(linkTarget.toString());
-    } else {
-      console.log("nope");
-    }
-  };
+  const { targets, linkTarget, handleClick } = props;
 
   return (
     <>

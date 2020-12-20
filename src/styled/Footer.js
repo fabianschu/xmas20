@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledFooter = styled.div`
   height: 20%;
+  max-height: 300px;
   width: 100%;
   max-width: 375px;
   background-color: black;
