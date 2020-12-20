@@ -3,6 +3,7 @@ import styled from "styled-components";
 import StyledLargeFooter from "../styled/LargeFooter";
 import StyledContentContainer from "../styled/ContentContainer";
 import StyledInput from "../styled/Input";
+import StyledLink from "../styled/Link";
 import ValidationButton from "../components/ValidationButton";
 
 const StyledQuestionContainer = styled.div`
@@ -46,13 +47,27 @@ const SecondQuizComponent = () => (
   </div>
 );
 
-const questions = [<FirstQuizComponent />, <SecondQuizComponent />];
+const ThirdQuizComponent = () => (
+  <div>
+    <p>
+      Es ist eine Gänseherde auf dem Feld. Eine Gans läuft vor zweien. Eine Gans
+      läuft zwischen zweien. Eine Gans läuft hinter zweien.
+    </p>
+    <br />
+    <Strong>Wie viel Gänse sind das?</Strong>
+  </div>
+);
+
+const questions = [
+  <FirstQuizComponent />,
+  <SecondQuizComponent />,
+  <ThirdQuizComponent />,
+];
 
 const Question = (props) => {
   const [text, setText] = useState("");
   const { correctAnswer, linkTarget, image, questionIndex } = props;
-  console.log(questionIndex);
-  console.log(questions);
+
   return (
     <StyledContentContainer>
       <StyledQuestionContainer image={image} />
@@ -68,6 +83,9 @@ const Question = (props) => {
             correctAnswer={correctAnswer}
             linkTarget={linkTarget}
           />
+          <StyledLink to={`/${linkTarget.toString()}`}>
+            Zu schwer - so weiter
+          </StyledLink>
         </div>
       </StyledLargeFooter>
     </StyledContentContainer>

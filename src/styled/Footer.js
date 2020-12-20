@@ -13,6 +13,9 @@ const StyledFooter = styled.div`
   font-family: "Century Gothic";
   font-size: 20px;
   color: #f8768b;
+  p {
+    text-align: center;
+  }
 `;
 
 export default StyledFooter;

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import TapGrid from "../components/TapGrid";
 import StyledContentContainer from "../styled/ContentContainer";
 import StyledFooter from "../styled/Footer";
+import StyledLink from "../styled/Link";
 
 const StyledSearchContainer = styled.div`
   background-image: url(${({ image, animation, showAnimation }) => {
@@ -24,6 +25,13 @@ const StyledSearchContainer = styled.div`
   height: 100%;
   display: flex;
 `;
+
+const FirstQuestion = () => (
+  <div>
+    <p>Es geht ein Dachshund herum...</p>
+    <p>Finde ihn und tippe ihn an!</p>
+  </div>
+);
 
 const Search = (props) => {
   const history = useHistory();
@@ -67,7 +75,12 @@ const Search = (props) => {
             }
           />
         </StyledSearchContainer>
-        <StyledFooter>Wo ist Sally?</StyledFooter>
+        <StyledFooter>
+          <FirstQuestion />
+          <StyledLink to={`/${linkTarget.toString()}`}>
+            Zu schwer - so weiter
+          </StyledLink>
+        </StyledFooter>
       </StyledContentContainer>
     </>
   );

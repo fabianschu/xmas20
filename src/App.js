@@ -139,6 +139,21 @@ function App() {
               questionIndex={1}
             />
           </Route>
+          <Route exact path="/5">
+            <Search
+              image={ridingRainbow}
+              targets={[11, 12, 15, 16]}
+              linkTarget={6}
+            />
+          </Route>
+          <Route exact path="/6">
+            <Question
+              correctAnswer={"3"}
+              linkTarget={7}
+              image={sallyGoose}
+              questionIndex={2}
+            />
+          </Route>
         </HashRouter>
       </Layout>
     </>
