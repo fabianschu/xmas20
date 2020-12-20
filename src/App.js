@@ -101,45 +101,43 @@ function App() {
       <GlobalStyle />
       <Layout>
         <HashRouter basename="/">
-          <Switch>
-            <Route exact path="/">
-              <Redirect to="/welcome" />
-            </Route>
-            <Route exact path="/welcome">
-              <Welcome />
-            </Route>
-            <Route exact path="/1">
-              <Search
-                image={sallyInTheBoxJpg}
-                animation={sallyInTheBoxGif}
-                targets={[32, 31, 30, 28, 27, 26, 24, 23]}
-                linkTarget={2}
-              />
-            </Route>
-            <Route exact path="/2">
-              <Question
-                correctAnswer={"10"}
-                linkTarget={3}
-                image={hypnoSally}
-                question={textForQ1}
-              />
-            </Route>
-            <Route exact path="/3">
-              <Search
-                image={ridingRainbow}
-                targets={[11, 12, 15, 16]}
-                linkTarget={4}
-              />
-            </Route>
-            <Route exact path="/4">
-              <Question
-                correctAnswer={"rinde"}
-                question={textForQ2}
-                linkTarget={5}
-                image={hypnoSally}
-              />
-            </Route>
-          </Switch>
+          <Route exact path="/">
+            <Redirect to="/welcome" />
+          </Route>
+          <Route exact path="/welcome">
+            <Welcome />
+          </Route>
+          <Route exact path="/1">
+            <Search
+              image={sallyInTheBoxJpg}
+              animation={sallyInTheBoxGif}
+              targets={[32, 31, 30, 28, 27, 26, 24, 23]}
+              linkTarget={2}
+            />
+          </Route>
+          <Route exact path="/2">
+            <Question
+              correctAnswer={"10"}
+              linkTarget={3}
+              image={hypnoSally}
+              question={textForQ1}
+            />
+          </Route>
+          <Route exact path="/3">
+            <Search
+              image={ridingRainbow}
+              targets={[11, 12, 15, 16]}
+              linkTarget={4}
+            />
+          </Route>
+          <Route exact path="/4">
+            <Question
+              correctAnswer={"rinde"}
+              question={textForQ2}
+              linkTarget={5}
+              image={hypnoSally}
+            />
+          </Route>
         </HashRouter>
       </Layout>
     </>
