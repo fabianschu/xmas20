@@ -14,6 +14,7 @@ import centuryGothicBold from "./assets/century_gothic_bold.ttf";
 import ridingRainbow from "./assets/riding-rainbow.gif";
 import sallyInTheBoxGif from "./assets/sally-in-the-box.gif";
 import sallyInTheBoxJpg from "./assets/sally-in-the-box.jpg";
+import hypnoSally from "./assets/hypno-sally.gif";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -82,6 +83,18 @@ const Layout = styled.div`
 
 function App() {
   console.log(sallyInTheBoxJpg);
+
+  const textForQ1 = [
+    "Der Weihnachtsmann schenkt Sally elf Kekse und sagt: ",
+    "„Es ist wichtig, dass Du sie nicht alle auf einmal isst. Warte mindestens sieben Minuten, bis Du einen weiteren Keks isst, sonst platzt du.“",
+    "Nach wieviel Minuten hat Sally frühestens alle Kekse gegessen?",
+  ];
+
+  const textForQ2 = [
+    "Nach wieviel Minuten hat Sally frühestens alle Kekse gegessen?",
+    "Was ist gemeint?",
+  ];
+
   return (
     <>
       <GlobalStyle />
@@ -95,17 +108,34 @@ function App() {
               <Welcome />
             </Route>
             <Route exact path="/1">
-              <Search image={ridingRainbow} targets={[15, 16]} linkTarget={2} />
-            </Route>
-            <Route exact path="/2">
-              <Question correctAnswer={"42"} linkTarget={3} />
-            </Route>
-            <Route exact path="/3">
               <Search
                 image={sallyInTheBoxJpg}
                 animation={sallyInTheBoxGif}
                 targets={[32, 31, 30, 28, 27, 26, 24, 23]}
+                linkTarget={2}
+              />
+            </Route>
+            <Route exact path="/2">
+              <Question
+                correctAnswer={"10"}
+                linkTarget={3}
+                image={hypnoSally}
+                question={textForQ1}
+              />
+            </Route>
+            <Route exact path="/3">
+              <Search
+                image={ridingRainbow}
+                targets={[11, 12, 15, 16]}
                 linkTarget={4}
+              />
+            </Route>
+            <Route exact path="/4">
+              <Question
+                correctAnswer={"rinde"}
+                question={textForQ2}
+                linkTarget={5}
+                image={hypnoSally}
               />
             </Route>
           </Switch>

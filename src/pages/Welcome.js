@@ -4,10 +4,10 @@ import styled from "styled-components";
 import LinkButton from "../components/LinkButton";
 import StyledFooter from "../styled/Footer";
 import StyledContentContainer from "../styled/ContentContainer";
-import ridingRainbow from "../assets/riding-rainbow.gif";
+import welcome from "../assets/welcome.gif";
 
 const StyledWelcomeTextContainer = styled.div`
-  background-image: url(${ridingRainbow});
+  background-image: url(${welcome});
   flex: 1;
   width: 100%;
   height: 100%;

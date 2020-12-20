@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import StyledLargeFooter from "../styled/LargeFooter";
 import StyledContentContainer from "../styled/ContentContainer";
-import hypnoSally from "../assets/hypno-sally.gif";
+import StyledInput from "../styled/Input";
 import ValidationButton from "../components/ValidationButton";
 
 const StyledQuestionContainer = styled.div`
-  background-image: url(${hypnoSally});
+  background-image: url(${({ image }) => image});
   background-attachment: fixed;
   background-position-x: center;
   background-repeat: no-repeat;
@@ -19,13 +19,22 @@ const StyledQuestionContainer = styled.div`
 
 const Question = (props) => {
   const [text, setText] = useState("");
-  const { correctAnswer, linkTarget } = props;
-
+  const { correctAnswer, linkTarget, image, question } = props;
+  console.log(question);
   return (
     <StyledContentContainer>
-      <StyledQuestionContainer />
+      <StyledQuestionContainer image={image} />
       <StyledLargeFooter>
-        <input value={text} onChange={(e) => setText(e.target.value)}></input>
+        {question.map((text) => (
+          <>
+            <p>{text}</p>
+            <br />
+          </>
+        ))}
+        <StyledInput
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        ></StyledInput>
         <ValidationButton
           text={text}
           correctAnswer={correctAnswer}
