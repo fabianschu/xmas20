@@ -8,7 +8,7 @@ const ValidationButton = (props) => {
   const { text, correctAnswer, linkTarget } = props;
 
   const handleClick = () => {
-    if (text.includes(correctAnswer)) {
+    if (text.toLowerCase().includes(correctAnswer)) {
       history.push(linkTarget.toString());
     }
   };

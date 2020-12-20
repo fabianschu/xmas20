@@ -16,6 +16,7 @@ import ridingRainbow from "./assets/riding-rainbow.gif";
 import sallyInTheBoxGif from "./assets/sally-in-the-box.gif";
 import sallyInTheBoxJpg from "./assets/sally-in-the-box.jpg";
 import hypnoSally from "./assets/hypno-sally.gif";
+import sallyGoose from "./assets/sally-goose.gif";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -92,7 +93,7 @@ function App() {
   ];
 
   const textForQ2 = [
-    "Nach wieviel Minuten hat Sally frühestens alle Kekse gegessen?",
+    "Es geht immer um den Baum herum und kann doch nicht hinein. Was meinen wir?",
     "Was ist gemeint?",
   ];
 
@@ -120,7 +121,7 @@ function App() {
               correctAnswer={"10"}
               linkTarget={3}
               image={hypnoSally}
-              question={textForQ1}
+              questionIndex={0}
             />
           </Route>
           <Route exact path="/3">
@@ -133,9 +134,9 @@ function App() {
           <Route exact path="/4">
             <Question
               correctAnswer={"rinde"}
-              question={textForQ2}
               linkTarget={5}
-              image={hypnoSally}
+              image={sallyGoose}
+              questionIndex={1}
             />
           </Route>
         </HashRouter>
