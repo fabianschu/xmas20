@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   Redirect,
+  HashRouter,
 } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import Welcome from "./pages/Welcome";
@@ -99,7 +100,7 @@ function App() {
     <>
       <GlobalStyle />
       <Layout>
-        <Router>
+        <HashRouter basename="/">
           <Switch>
             <Route exact path="/">
               <Redirect to="/welcome" />
@@ -139,7 +140,7 @@ function App() {
               />
             </Route>
           </Switch>
-        </Router>
+        </HashRouter>
       </Layout>
     </>
   );
