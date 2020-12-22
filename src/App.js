@@ -18,7 +18,8 @@ import sallyInTheBoxJpg from "./assets/sally-in-the-box.jpg";
 import hypnoSally from "./assets/hypno-sally.gif";
 import sallyGoose from "./assets/sally-goose.gif";
 import sallyTree from "./assets/sally-tree.gif";
-import sallySuitcase from "./assets/sally-suitcase.gif";
+import sallySuitcaseGif from "./assets/sally-suitcase.gif";
+import sallySuitcaseJpg from "./assets/sally-suitcase.jpg";
 import okCiao from "./assets/okciao.gif";
 import welcome from "./assets/welcome.gif";
 
@@ -135,7 +136,8 @@ function App() {
           </Route>
           <Route exact path="/cookies">
             <Search
-              image={sallySuitcase}
+              image={sallySuitcaseJpg}
+              animation={sallySuitcaseGif}
               targets={[18, 19, 22, 23]}
               linkTarget={"jeez"}
               instruction={
