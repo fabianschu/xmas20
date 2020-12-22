@@ -22,8 +22,16 @@ const Strong = styled.span`
   font-weight: bold;
 `;
 
+const StyledInstruction = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
+`;
+
 const FirstQuizComponent = () => (
-  <div>
+  <StyledInstruction>
     <p>Der Weihnachtsmann schenkt Sally elf Kekse und sagt: </p>
     <br />
     <p>
@@ -33,29 +41,26 @@ const FirstQuizComponent = () => (
     </p>
     <br />
     <p>Nach wieviel Minuten hat Sally frühestens alle Kekse gegessen?</p>
-  </div>
+  </StyledInstruction>
 );
 
 const SecondQuizComponent = () => (
-  <div>
-    <p>
-      Es geht immer um den Baum herum und kann doch nicht hinein. Was meinen
-      wir?
-    </p>
+  <StyledInstruction>
+    <p>Es geht immer um den Baum herum und kann doch nicht hinein.</p>
     <br />
-    <p>Was ist gemeint?</p>
-  </div>
+    <Strong>Was ist gemeint?</Strong>
+  </StyledInstruction>
 );
 
 const ThirdQuizComponent = () => (
-  <div>
+  <StyledInstruction>
     <p>
       Es ist eine Gänseherde auf dem Feld. Eine Gans läuft vor zweien. Eine Gans
       läuft zwischen zweien. Eine Gans läuft hinter zweien.
     </p>
     <br />
     <Strong>Wie viel Gänse sind das?</Strong>
-  </div>
+  </StyledInstruction>
 );
 
 const questions = [

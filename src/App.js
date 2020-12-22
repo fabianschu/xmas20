@@ -7,7 +7,7 @@ import {
   HashRouter,
 } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import Welcome from "./pages/Welcome";
+import WelcomeBye from "./pages/WelcomeBye";
 import Search from "./pages/Search";
 import Question from "./pages/Question";
 import centuryGothic from "./assets/century_gothic_regular.ttf";
@@ -17,6 +17,10 @@ import sallyInTheBoxGif from "./assets/sally-in-the-box.gif";
 import sallyInTheBoxJpg from "./assets/sally-in-the-box.jpg";
 import hypnoSally from "./assets/hypno-sally.gif";
 import sallyGoose from "./assets/sally-goose.gif";
+import sallyTree from "./assets/sally-tree.gif";
+import sallySuitcase from "./assets/sally-suitcase.gif";
+import okCiao from "./assets/okciao.gif";
+import welcome from "./assets/welcome.gif";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -84,75 +88,70 @@ const Layout = styled.div`
 `;
 
 function App() {
-  console.log(sallyInTheBoxJpg);
-
-  const textForQ1 = [
-    "Der Weihnachtsmann schenkt Sally elf Kekse und sagt: ",
-    "„Es ist wichtig, dass Du sie nicht alle auf einmal isst. Warte mindestens sieben Minuten, bis Du einen weiteren Keks isst, sonst platzt du.“",
-    "Nach wieviel Minuten hat Sally frühestens alle Kekse gegessen?",
-  ];
-
-  const textForQ2 = [
-    "Es geht immer um den Baum herum und kann doch nicht hinein. Was meinen wir?",
-    "Was ist gemeint?",
-  ];
-
   return (
     <>
       <GlobalStyle />
       <Layout>
         <HashRouter basename="/">
           <Route exact path="/">
-            <Redirect to="/welcome" />
+            <Redirect to="/coocoo" />
           </Route>
-          <Route exact path="/welcome">
-            <Welcome />
+          <Route exact path="/coocoo">
+            <WelcomeBye linkTarget={"presentinho"} image={welcome} />
           </Route>
-          <Route exact path="/1">
+          <Route exact path="/presentinho">
             <Search
               image={sallyInTheBoxJpg}
               animation={sallyInTheBoxGif}
               targets={[32, 31, 30, 28, 27, 26, 24, 23]}
-              linkTarget={2}
+              linkTarget={"sigmund"}
+              instruction={"Es rappelt in der Kiste..."}
             />
           </Route>
-          <Route exact path="/2">
+          <Route exact path="/sigmund">
             <Question
-              correctAnswer={"10"}
-              linkTarget={3}
+              correctAnswer={"70"}
+              linkTarget={"rainbow"}
               image={hypnoSally}
               questionIndex={0}
             />
           </Route>
-          <Route exact path="/3">
+          <Route exact path="/rainbow">
             <Search
               image={ridingRainbow}
               targets={[11, 12, 15, 16]}
-              linkTarget={4}
+              linkTarget={"palmtree"}
+              instruction={"Es geht ein Dachshund herum..."}
             />
           </Route>
-          <Route exact path="/4">
+          <Route exact path="/palmtree">
             <Question
               correctAnswer={"rinde"}
-              linkTarget={5}
-              image={sallyGoose}
+              linkTarget={"cookies"}
+              image={sallyTree}
               questionIndex={1}
             />
           </Route>
-          <Route exact path="/5">
+          <Route exact path="/cookies">
             <Search
-              image={ridingRainbow}
-              targets={[11, 12, 15, 16]}
-              linkTarget={6}
+              image={sallySuitcase}
+              targets={[18, 19, 22, 23]}
+              linkTarget={"jeez"}
+              instruction={
+                "Backe, backe, Kuchen.. Welche Zutate brauchen für unsere Plätzchen?"
+              }
             />
           </Route>
-          <Route exact path="/6">
+          <Route exact path="/jeez">
             <Question
               correctAnswer={"3"}
-              linkTarget={7}
+              linkTarget={"okciao"}
               image={sallyGoose}
               questionIndex={2}
             />
+          </Route>
+          <Route exact path="/okciao">
+            <WelcomeBye image={okCiao} />
           </Route>
         </HashRouter>
       </Layout>

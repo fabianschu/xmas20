@@ -1,10 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
 
 const StyledClickArea = styled.div`
   flex: 1;
   height: 100%;
+  border: 1px solid
+    ${({ targets, id }) => {
+      console.log(targets);
+      console.log(id);
+      console.log(targets.includes(toString(id)));
+      if (targets.includes(id)) {
+        return "red";
+      } else {
+        return "green";
+      }
+    }};
 `;
 
 const StyledClickRow = styled.div`
@@ -14,57 +24,57 @@ const StyledClickRow = styled.div`
 `;
 
 const TapGrid = (props) => {
-  const { handleClick } = props;
+  const { handleClick, targets } = props;
 
   return (
     <>
       <StyledClickRow>
-        <StyledClickArea id={1} onClick={handleClick} />
-        <StyledClickArea id={2} onClick={handleClick} />
-        <StyledClickArea id={3} onClick={handleClick} />
-        <StyledClickArea id={4} onClick={handleClick} />
+        <StyledClickArea id={1} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={2} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={3} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={4} onClick={handleClick} targets={targets} />
       </StyledClickRow>
       <StyledClickRow>
-        <StyledClickArea id={5} onClick={handleClick} />
-        <StyledClickArea id={6} onClick={handleClick} />
-        <StyledClickArea id={7} onClick={handleClick} />
-        <StyledClickArea id={8} onClick={handleClick} />
+        <StyledClickArea id={5} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={6} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={7} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={8} onClick={handleClick} targets={targets} />
       </StyledClickRow>
       <StyledClickRow>
-        <StyledClickArea id={9} onClick={handleClick} />
-        <StyledClickArea id={10} onClick={handleClick} />
-        <StyledClickArea id={11} onClick={handleClick} />
-        <StyledClickArea id={12} onClick={handleClick} />
+        <StyledClickArea id={9} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={10} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={11} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={12} onClick={handleClick} targets={targets} />
       </StyledClickRow>
       <StyledClickRow>
-        <StyledClickArea id={13} onClick={handleClick} />
-        <StyledClickArea id={14} onClick={handleClick} />
-        <StyledClickArea id={15} onClick={handleClick} />
-        <StyledClickArea id={16} onClick={handleClick} />
+        <StyledClickArea id={13} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={14} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={15} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={16} onClick={handleClick} targets={targets} />
       </StyledClickRow>
       <StyledClickRow>
-        <StyledClickArea id={17} onClick={handleClick} />
-        <StyledClickArea id={18} onClick={handleClick} />
-        <StyledClickArea id={19} onClick={handleClick} />
-        <StyledClickArea id={20} onClick={handleClick} />
+        <StyledClickArea id={17} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={18} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={19} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={20} onClick={handleClick} targets={targets} />
       </StyledClickRow>
       <StyledClickRow>
-        <StyledClickArea id={21} onClick={handleClick} />
-        <StyledClickArea id={22} onClick={handleClick} />
-        <StyledClickArea id={23} onClick={handleClick} />
-        <StyledClickArea id={24} onClick={handleClick} />
+        <StyledClickArea id={21} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={22} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={23} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={24} onClick={handleClick} targets={targets} />
       </StyledClickRow>
       <StyledClickRow>
-        <StyledClickArea id={25} onClick={handleClick} />
-        <StyledClickArea id={26} onClick={handleClick} />
-        <StyledClickArea id={27} onClick={handleClick} />
-        <StyledClickArea id={28} onClick={handleClick} />
+        <StyledClickArea id={25} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={26} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={27} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={28} onClick={handleClick} targets={targets} />
       </StyledClickRow>
       <StyledClickRow>
-        <StyledClickArea id={29} onClick={handleClick} />
-        <StyledClickArea id={30} onClick={handleClick} />
-        <StyledClickArea id={31} onClick={handleClick} />
-        <StyledClickArea id={32} onClick={handleClick} />
+        <StyledClickArea id={29} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={30} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={31} onClick={handleClick} targets={targets} />
+        <StyledClickArea id={32} onClick={handleClick} targets={targets} />
       </StyledClickRow>
     </>
   );

@@ -11,6 +11,7 @@ const StyledInput = styled.input`
   font-size: 25px;
   text-align: center;
   padding: 0;
+  color: #f8768b;
 `;
 
 export default StyledInput;
