@@ -33,13 +33,11 @@ const StyledInstruction = styled.div`
 const FirstQuizComponent = () => (
   <StyledInstruction>
     <p>Der Weihnachtsmann schenkt Sally elf Kekse und sagt: </p>
-    <br />
     <p>
       „Es ist wichtig, dass Du sie nicht alle auf einmal isst. Warte mindestens
       sieben Minuten, bis Du einen weiteren Keks isst,{" "}
       <Strong>sonst platzt du.</Strong>“
     </p>
-    <br />
     <p>Nach wieviel Minuten hat Sally frühestens alle Kekse gegessen?</p>
   </StyledInstruction>
 );
@@ -47,7 +45,6 @@ const FirstQuizComponent = () => (
 const SecondQuizComponent = () => (
   <StyledInstruction>
     <p>Es geht immer um den Baum herum und kann doch nicht hinein.</p>
-    <br />
     <Strong>Was ist gemeint?</Strong>
   </StyledInstruction>
 );
@@ -58,7 +55,6 @@ const ThirdQuizComponent = () => (
       Es ist eine Gänseherde auf dem Feld. Eine Gans läuft vor zweien. Eine Gans
       läuft zwischen zweien. Eine Gans läuft hinter zweien.
     </p>
-    <br />
     <Strong>Wie viel Gänse sind das?</Strong>
   </StyledInstruction>
 );
