@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/xmas20/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/xmas20/static/js/main.091bdf32.chunk.js",
-    "main.js.map": "/xmas20/static/js/main.091bdf32.chunk.js.map",
+    "main.js": "/xmas20/static/js/main.aede056f.chunk.js",
+    "main.js.map": "/xmas20/static/js/main.aede056f.chunk.js.map",
     "runtime-main.js": "/xmas20/static/js/runtime-main.59b08184.js",
     "runtime-main.js.map": "/xmas20/static/js/runtime-main.59b08184.js.map",
     "static/js/2.97265e51.chunk.js": "/xmas20/static/js/2.97265e51.chunk.js",
@@ -20,6 +20,7 @@
     "static/media/sally-goose.aff53194.gif": "/xmas20/static/media/sally-goose.aff53194.gif",
     "static/media/sally-in-the-box.ec898083.gif": "/xmas20/static/media/sally-in-the-box.ec898083.gif",
     "static/media/sally-in-the-box.ee8dacc1.jpg": "/xmas20/static/media/sally-in-the-box.ee8dacc1.jpg",
+    "static/media/sally-suitcase.7f0d1044.jpg": "/xmas20/static/media/sally-suitcase.7f0d1044.jpg",
     "static/media/sally-suitcase.b2b1713d.gif": "/xmas20/static/media/sally-suitcase.b2b1713d.gif",
     "static/media/sally-tree.e95ce2ce.gif": "/xmas20/static/media/sally-tree.e95ce2ce.gif",
     "static/media/welcome.179c3c18.gif": "/xmas20/static/media/welcome.179c3c18.gif"
@@ -28,6 +29,6 @@
     "static/js/runtime-main.59b08184.js",
     "static/js/2.97265e51.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.091bdf32.chunk.js"
+    "static/js/main.aede056f.chunk.js"
   ]
 }
