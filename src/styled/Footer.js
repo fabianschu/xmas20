@@ -11,7 +11,7 @@ const StyledFooter = styled.div`
   align-items: center;
   justify-content: space-evenly;
   font-family: "Century Gothic";
-  font-size: 16px;
+  font-size: 14px;
   color: #f8768b;
   p,
   span {
