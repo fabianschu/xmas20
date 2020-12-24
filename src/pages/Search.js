@@ -15,10 +15,11 @@ const StyledSearchContainer = styled.div`
   }});
   background-position: center;
   background-size: cover;
+  flex: 1;
   flex-direction: column;
   width: 100%;
   max-width: 375px;
-  height: 570px;
+  height: 100%;
   display: flex;
 `;
 
