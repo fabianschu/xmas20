@@ -83,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = styled.div`
   background-color: black;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
