@@ -4,17 +4,6 @@ import styled from "styled-components";
 const StyledClickArea = styled.div`
   flex: 1;
   height: 100%;
-  border: 1px solid
-    ${({ targets, id }) => {
-      console.log(targets);
-      console.log(id);
-      console.log(targets.includes(toString(id)));
-      if (targets.includes(id)) {
-        return "red";
-      } else {
-        return "green";
-      }
-    }};
 `;
 
 const StyledClickRow = styled.div`

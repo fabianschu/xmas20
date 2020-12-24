@@ -18,7 +18,7 @@ const StyledFooter = styled.div`
     text-align: center;
     margin: 10px 0;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
   }
   span {

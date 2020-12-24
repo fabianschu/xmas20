@@ -14,7 +14,7 @@ const StyledFooter = styled.div`
   padding: 25px 0;
   p {
     margin: 0 20px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
   }
 `;
