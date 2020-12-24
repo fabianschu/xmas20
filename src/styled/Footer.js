@@ -18,11 +18,8 @@ const StyledFooter = styled.div`
     text-align: center;
     margin: 10px 0;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
-  }
-  span {
-    font-weight: bold;
   }
 `;
 
