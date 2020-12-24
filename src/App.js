@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     line-height: 1;
-    max-height: 100vh;
+    height: 100vh;
   }
   ol, ul {
     list-style: none;
