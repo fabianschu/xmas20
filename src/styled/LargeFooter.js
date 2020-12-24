@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
-  flex: 1;
+  height: 350px;
   width: 100%;
   max-width: 375px;
   font-family: "Century Gothic";
@@ -11,7 +11,7 @@ const StyledFooter = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 25px 0;
+  padding: 10px 0;
   p {
     margin: 0 20px;
     font-size: 14px;

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
-  height: 20%;
-  max-height: 300px;
+  flex-grow: 1;
   width: 100%;
   max-width: 375px;
   background-color: black;
@@ -19,7 +18,7 @@ const StyledFooter = styled.div`
     margin: 10px 0;
     display: block;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.2;
   }
 `;
 

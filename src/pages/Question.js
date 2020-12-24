@@ -12,7 +12,7 @@ const StyledQuestionContainer = styled.div`
   background-position-x: center;
   background-repeat: no-repeat;
   flex-direction: column;
-  height: 270px;
+  flex: 1;
   width: 100%;
   max-width: 375px;
   display: flex;
